@@ -1,0 +1,25 @@
+  <app-header></app-header>
+  <div class="space"></div>
+    <div class ="subheading">
+  <h3 class="type">{{this.typeProduct}}</h3>
+  </div>
+  <!--<div class="outline" *ngFor="let item of searchResults">-->
+    <div class="outline" *ngFor="let item of (filteredProducts.length > 0 ? filteredProducts : searchResults)">
+    <!---<button class="laptop" (click)="saveProduct()" routerLink="/products"> <h3 class="data">{{ item.product.title }}</h3></button>-->
+    <a href routerLink="/detailedProducts" class ="laptop" (click)="saveProduct(item)" >{{ item.product.title }}</a>
+    <p class="data">From {{item.offers.primary.seller.name}}</p>
+    <!---- <p class="data">From {{item.offers.seller.name}}</p>-->
+       <img class="image" *ngFor="let image of item.product.images" [src]="image" alt="Product Image">
+       <h2 class="data">{{ item.offers.primary.currency_symbol }}{{ item.offers.primary.price }}</h2>
+  
+  </div>
+
+  <div class="sidebar">
+    <!-- Sidebar content here -->
+    <h2>Price Range</h2>
+    <mat-slider class="range" showTickMarks discrete min="5" max="1000" [(ngModel)]="startValue"(change)="updateFilter()">
+      <input  [(ngModel)]="startValue" matSliderStartThumb>
+      <input  [(ngModel)]="endValue" matSliderEndThumb>
+    </mat-slider>
+    
+  </div>
