@@ -1,6 +1,5 @@
 name: Build Angular Project
 
-# This workflow is triggered on pushes and pull requests to the src directory
 on:
   push:
     paths:
@@ -20,23 +19,13 @@ jobs:
       - name: Setup Node.js
         uses: actions/setup-node@v2
         with:
-          node-version: '20'  # Specify your Node.js version here
-      
+          node-version: '14' # Adjust as per your project requirement
+
       - name: Install Angular CLI
         run: npm install -g @angular/cli
-        
-      - name: List directory structure
-        run: |
-          pwd
-          ls -l
-          # List contents of src if needed
-          ls -l src
 
       - name: Install Dependencies
-        run: |
-          npm install
-          
+        run: npm install
+
       - name: Build Angular App
-        run: |
-          cd src/app
-          ng build --configuration=production
+        run: ng build --configuration=production
