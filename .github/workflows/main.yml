@@ -1,0 +1,33 @@
+name: Build Angular Project
+
+# This workflow is triggered on pushes and pull requests to the src directory
+on:
+  push:
+    paths:
+      - 'src/**'
+  pull_request:
+    paths:
+      - 'src/**'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14'  # Specify your Node.js version here
+
+      - name: Install Dependencies
+        run: |
+          cd src
+          npm install
+
+      - name: Build Angular App
+        run: |
+          cd app
+          ng build --configuration=production
