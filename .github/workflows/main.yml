@@ -28,4 +28,6 @@ jobs:
         run: npm install
 
       - name: Build Angular App
-        run: ng build --configuration=production
+        run: |
+          cd src/
+          ng build --configuration=production
