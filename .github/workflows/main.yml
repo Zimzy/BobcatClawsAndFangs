@@ -28,5 +28,5 @@ jobs:
 
       - name: Build Angular App
         run: |
-          cd app
+          cd src/app
           ng build --configuration=production
