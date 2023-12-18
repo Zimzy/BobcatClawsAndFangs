@@ -1,10 +1,10 @@
 DB_DUMP_FILE = database_dump.sql
-DB_NAME = "BobcatClawsDB"
-DB_USERNAME = "BobcatClawsDev"
-DB_PASSWORD = "CS#4398DB"
+DB_NAME = ""
+DB_USERNAME = ""
+DB_PASSWORD = ""
 DB_CREDENTIALS_FILE = db_credentials.cnf
-APP_NAME = "webapp"
-PROJECT_DIR = "Software-Engineering-Project-Course"
+APP_NAME = ""
+PROJECT_DIR = ""
 NGINX_CONFIG = "nginx_config"
 
 NODE_VERSION = v21.1.0
