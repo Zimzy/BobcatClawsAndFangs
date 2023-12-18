@@ -3,9 +3,9 @@ import mysql.connector
 # Database configuration
 db_config = {
     "host": "localhost",
-    "user": 'BobcatClawsDev',
-    "password": 'CS#4398DB',
-    "database": 'BobcatClawsDB'
+    "user": 'DB user',
+    "password": 'DB passwd',
+    "database": 'DB name'
 }
 # Connect to the MySQL database
 connection = mysql.connector.connect(**db_config)
