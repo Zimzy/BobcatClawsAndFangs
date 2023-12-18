@@ -4,9 +4,9 @@ const fs = require('fs');
 // Database connection parameters
 const connection = mysql.createConnection({
   host: 'localhost',
-  user: 'BobcatClawsDev',
-  password: 'CS#4398DB',
-  database: 'BobcatClawsDB'
+  user: 'DB user',
+  password: 'DB passwd',
+  database: 'DB name'
 });
 
 // Connect to the database
