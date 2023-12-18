@@ -3,10 +3,10 @@ import mysql.connector
 
 # Configuration for the MySQL connection
 config = {
-    'user': 'BobcatClawsDev',
-    'password': 'CS#4398DB',
+    'user': 'DB user',
+    'password': 'DB passwd',
     'host': 'localhost',
-    'database': 'BobcatClawsDB'
+    'database': 'DB name'
 }
 
 # Read the JSON file
