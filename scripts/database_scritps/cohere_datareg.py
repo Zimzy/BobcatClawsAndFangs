@@ -29,7 +29,7 @@ del line
 claws = mysql.connector.connect(
         host='localhost',
         user='root',
-        database='BobcatClawsDB'
+        database='DB name'
 )
 
 
