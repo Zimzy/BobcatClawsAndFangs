@@ -7,9 +7,9 @@ app.use(bodyParser.json());
 
 const db = mysql.createConnection({
   host: 'localhost',
-  user: 'BobcatClawsDev',
-  password: 'CS#4398DB',
-  database: 'BobcatClawsDB'
+  user: 'DB user',
+  password: 'DB passwd',
+  database: 'DB name'
 });
 
 app.get('/api/table', (req, res) => {
