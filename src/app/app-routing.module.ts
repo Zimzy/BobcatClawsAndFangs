@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomepageComponent } from './homepage/homepage.component';
-import { ProductspageComponent } from './productspage/productspage.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { CoffeeMakersComponent } from './coffee-makers/coffee-makers.component';
 import { DetailedproductsComponent } from './detailedproducts/detailedproducts.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { ProductspageComponent } from './productspage/productspage.component';
 
 const routes: Routes = [
   {path: '', component: HomepageComponent},
@@ -15,6 +15,8 @@ const routes: Routes = [
   {path: 'Headphones',component: CategoryPageComponent},
   {path: 'coffee', component: CoffeeMakersComponent},
   {path: 'detailedProducts', component: DetailedproductsComponent}
+
+  //TODO: path: 'cart', component: CartComponent. Seperate page for the user's cart
 
 ];
 
