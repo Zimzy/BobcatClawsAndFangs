@@ -1,7 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as jsonData from '../assets/laptops.json'
 import { SaveProductService } from '../save-product.service';
-import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-productspage',
   templateUrl: './productspage.component.html',
@@ -16,6 +14,12 @@ export class ProductspageComponent implements OnInit {
         this.product = this.saveProductService.getProduct();
         this.similarProducts = this.getSimilarProducts()
     }
+
+    //TODO: Expand product details and functions to grab details.
+    // Price per ounce/pound? We could write a separate script to calculate this from the given price itself,
+    // if the vendor does not have this information readily available 
+
+
     printProduct(): any{
       console.log('printing',this.product.Name)
       return this.product.Name
