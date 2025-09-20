@@ -107,3 +107,12 @@
         border-style: double;
         border-radius: 10px;
     }
+
+    .Cart{
+        
+        position: fixed;
+        top:10;
+        right:0;
+        
+        
+    }
