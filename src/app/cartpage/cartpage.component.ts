@@ -1,13 +1,17 @@
-// import { Component } from '@angular/core';
+import { Component } from '@angular/core';
+import * as jsonData from '../assets/db_data.json';
+import { SaveProductService } from '../save-product.service';
 
-// @Component({
-//   selector: 'app-cartpage',
-//   templateUrl: './cartpage.component.html',
-//   styleUrls: ['./cartpage.component.css']
-// })
+@Component({
+  selector: 'app-cartpage',
+  //templateUrl: './cartpage.component.html',
+  template: '',
 
-// export class CartComponent {
-//   // constructor(private saveProductService: SaveProductService, ){}
-//   // data: any = jsonData;
-//   // bookmarkedProducts: any[] = [];
-// }
+  styleUrls: ['./cartpage.component.css']
+})
+
+export class CartComponent {
+  constructor(private saveProductService: SaveProductService, ){}
+  data: any = jsonData;
+  bookmarkedProducts: any[] = [];
+}
