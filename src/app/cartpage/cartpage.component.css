@@ -1,4 +1,15 @@
-.space{
-    
-    margin: 200px;
+
+
+.labelHeader{
+    padding-left: 5px;
+    font-size: medium;
 }
+
+.home{
+        
+        position: fixed;
+        top:10;
+        right:0;
+        
+        
+    }
