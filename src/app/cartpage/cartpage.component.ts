@@ -15,6 +15,11 @@ export class CartComponent {
   data: any = jsonData;
   bookmarkedProducts: any[] = [];
   ngOnInit(){
-    console.log('Product Data',this.bookmarkedProducts);
+    this.bookmarkedProducts.push(this.saveProductService.getCart());
   }
+
+  returnCart(): any{
+    return this.bookmarkedProducts;
+  }
+
 }

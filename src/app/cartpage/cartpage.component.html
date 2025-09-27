@@ -1,7 +1,20 @@
-
-
-
+<mat-toolbar class="header">
+<mat-toolbar-row class="header">
+        <button class="Title" routerLink="/home">
+      <span class="labelHeader" >BOBCAT CLAWS</span>
+      </button>
 
         <button class="home" routerLink="/home">
           <span class="labelHeader">HOME</span>
         </button>
+        
+      <span class="spacer"></span>
+  
+        
+
+    </mat-toolbar-row>
+</mat-toolbar>
+<h3 class="productInfo">
+      {{returnCart()}}
+     </h3>
+       

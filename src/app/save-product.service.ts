@@ -7,10 +7,20 @@ export class SaveProductService {
    productValue: any ;
    productCategory: any;
    keyword: any;
+   cart: any[] = [];
    // saves clicked on product for detailed product page functionality 
    saveProductService(value: any){
     this.productValue = value;
    }
+
+   saveCart(value: any){
+    this.cart.push(value);
+   }
+
+   getCart(){
+    return this.cart;
+   }
+
    //saves keyword to display on categories page
    saveKeyword(value: any){
     this.keyword = value;

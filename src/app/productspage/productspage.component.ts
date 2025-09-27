@@ -40,4 +40,8 @@ export class ProductspageComponent implements OnInit {
       });
       console.log('similar products:', this.similarProducts)
   }
+
+  saveCart(){
+    this.saveProductService.cart.push(this.product);
+  }
 }
