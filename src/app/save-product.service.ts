@@ -13,8 +13,8 @@ export class SaveProductService {
     this.productValue = value;
    }
 
-   saveCart(value: any){
-    this.cart.push(value);
+   saveCart(){
+    this.cart.push(this.productValue);
    }
 
    getCart(){

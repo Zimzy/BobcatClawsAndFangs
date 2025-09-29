@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import * as jsonData from '../assets/db_data.json';
 import { SaveProductService } from '../save-product.service';
 
@@ -10,16 +10,25 @@ import { SaveProductService } from '../save-product.service';
   styleUrls: ['./cartpage.component.css']
 })
 
-export class CartComponent {
+export class CartComponent implements OnInit{
   constructor(private saveProductService: SaveProductService, ){}
   data: any = jsonData;
   bookmarkedProducts: any[] = [];
   ngOnInit(){
-    this.bookmarkedProducts.push(this.saveProductService.getCart());
+    this.bookmarkedProducts = this.saveProductService.getCart();
+    //this.bookmarkedProducts.push(this.saveProductService.getCart());
   }
 
   returnCart(): any{
-    return this.bookmarkedProducts;
+    for(let i = 0; i<this.bookmarkedProducts.length; i++){
+      console.log('printing in cart ', this.bookmarkedProducts[i]);
+      console.log('cart length:', this.bookmarkedProducts.length);
+      
+      return this.bookmarkedProducts[i].Name; // array is empty?
+    }
+    
   }
+  
+
 
 }
