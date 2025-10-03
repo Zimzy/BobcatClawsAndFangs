@@ -120,8 +120,8 @@
         border-style: hidden;
         position: fixed;
         top:10;
-        right:0;
-        padding-right: 2;
+        right:15px;
+        
         text-align: center;
         
     }
