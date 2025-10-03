@@ -24,10 +24,12 @@ export class CartComponent implements OnInit{
       console.log('printing in cart ', this.bookmarkedProducts[i]);
       console.log('cart length:', this.bookmarkedProducts.length);
       
-      return this.bookmarkedProducts[i].Name; // array is empty?
+      return this.bookmarkedProducts[i].Name; // needs work
     }
     
   }
+
+    
   
 
 

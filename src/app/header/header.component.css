@@ -1,15 +1,16 @@
 .header{
-    background-color: black;
+    background-color: #501214;
     color: white;
 }
 .items{
-    background-color: #232f3e;
+    font-family: Roboto Mono;
+    background-color: #AC9155;
     color:white;
-    border-style:double;
-    border-color: black;
+    border-style: solid;
+    border-color: #AC9155;
 }
 .icon{
-    background-color: #232f3e;
+    background-color: #AC9155;
     border-style: none;
     color: white;
 }
@@ -18,8 +19,9 @@
 
 }
 .labelHeader{
+    font-family:Brandon Grotesque;
     padding-left: 5px;
-    font-size: medium;
+    font-size: large;
 }
 .spacer{
     flex: .5 1 auto;
@@ -31,7 +33,7 @@
 }
 .Products{
   padding-left: 650px;
-  border-style: double;
+  border-style: solid;
  
 }
 
@@ -41,8 +43,8 @@
     margin-left: 400px;
 }
 .outline:hover{
-    border-style: double;
-    border-color: blue;
+    border-style: solid;
+    border-color: #D7BD8A;
 }
 .image{
     width: 200px;
@@ -52,17 +54,18 @@
 }
 .laptop{
     border-style: none;
-    background-color: white ;
+    background-color: #501214 ;
     margin-left: 150px;
     font-size: x-large;
     text-align: center;
    
 }
 .laptop:hover{
-    border-style: double;
-    border-color: black;
+    border-style: solid;
+    border-color: #501214;
 }
 .sidenav {
+    
     height: 100%;
     width: 160px;
     position: fixed;
@@ -83,9 +86,10 @@
   }
   
   .sidenav a:hover {
-    color: #f1f1f1;
+    color: #D7BD8A;
   }
   .horizontal-mat-list-item {
+    
     float: right;
     display: list-item;
    
@@ -97,22 +101,32 @@
         border: 1px solid yellow;
       }
       .Title{
-        background-color: #000000;
+        background-color: #501214;
         border-style: none;
         color: white;
     }
    
     .Title:hover{
         border-color: azure;
-        border-style: double;
+        border-style: hidden;
         border-radius: 10px;
     }
 
     .Cart{
-        
+        font-family: Roboto Mono;
+        color:#f1f1f1;
+        background-color: #501214;
+        border-color: #AC9155;
+        border-style: hidden;
         position: fixed;
         top:10;
         right:0;
+        padding-right: 2;
+        text-align: center;
         
-        
+    }
+
+    .Cart:hover{
+        border-style: solid;
+
     }

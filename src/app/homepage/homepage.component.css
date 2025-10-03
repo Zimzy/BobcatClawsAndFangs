@@ -1,5 +1,5 @@
 .header{
-    background-color: black;
+    background-color: #501214;
     color: white;
 }
 .items{
@@ -42,7 +42,7 @@
 }
 .outline:hover{
     border-style: double;
-    border-color: blue;
+    border-color: #D7BD8A;
 }
 .image{
     width: 200px;
