@@ -1,10 +1,9 @@
 
   <app-header></app-header>
-  <div class="container">
-    
-     <div class="productInfo">
+  <div>
+     <h3 class="productInfo">
       {{printProduct()}}
-     </div>
+     </h3>
    <!---- <img class="image" *ngFor="let image of this.product.Img_URL" [src]="image" alt="Product Image">-->
     <img class="image" [src]="this.product.Img_URL" alt="{{ this.product.Name }}">
        <h2 class="productInfo">${{  this.product.Price}}</h2>
@@ -16,7 +15,7 @@
   </div>
 
   <button (click)="saveToCart()"> 
-    <span class="labelHeader">Add to cart</span>
+    <span class="Cart">Add to cart</span>
   </button>
 
   <div>
