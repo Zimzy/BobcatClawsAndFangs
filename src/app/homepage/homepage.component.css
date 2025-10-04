@@ -27,40 +27,67 @@
 
 .space{
     
-    margin: 200px;
+    margin: 25px;
 }
 .Products{
   padding-left: 650px;
-  border-style: double;
+  border-style: solid;
  
 }
 
 .data{
+    
+    font-family: Roboto Mono;
+    font-size: 32px;
+    text-align: center;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+
+.dataProduct{
+    
+    font-family: Roboto Mono;
+    
+    text-align: center;
+    margin-right: 200px;
+    margin-left: 200px;
+}
+.dataProductLink{
+    font-family: Roboto Mono;
+    
     text-align: left;
-    margin-right: 400px;
-    margin-left: 400px;
+  
+}
+.outline{
+    
+    text-align: center;
+    margin-left: 500px;
+    margin-right: 500px;
 }
 .outline:hover{
-    border-style: double;
+    padding-right: 0px;
+    padding-left: 0px;
+    border-style: solid;
     border-color: #D7BD8A;
 }
 .image{
     width: 200px;
-    margin-right: 400px;
-    margin-left: 400px;
+    margin-right: 200px;
+    margin-left: 200px;
     height: 200px;
 }
 .laptop{
     border-style: none;
     background-color: white ;
-    margin-left: 150px;
-    font-size: x-large;
-    text-align: center;
+    margin-right: 400px;
+    margin-left: 50px;
+    font-size: large;
+    text-align: left;
    
 }
 .laptop:hover{
-    border-style: double;
-    border-color: black;
+    border-style:solid;
+    border-color:#D7BD8A;
 }
 .sidenav {
     height: 100%;
@@ -96,3 +123,8 @@
         height: 300px;
         border: 1px solid yellow;
       }
+
+      .container {
+  grid-template-columns: [first] 40px [line2] 50px [line3] auto [col4-start] 50px [five] 40px [end];
+  grid-template-rows: [row1-start] 25% [row1-end] 100px [third-line] auto [last-line];
+}

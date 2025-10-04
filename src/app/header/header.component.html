@@ -34,7 +34,7 @@
       <!-- /mat-menu -->
   
       <button mat-button [matMenuTriggerFor]="electronicsMenu">
-        Electronics <mat-icon>arrow_drop_down</mat-icon>
+        <span class="font">Electronics </span><mat-icon>arrow_drop_down</mat-icon>
       </button>
       <!-- Electronics Menu Dropdown Categories -->
       <mat-menu #electronicsMenu="matMenu">
@@ -47,7 +47,7 @@
       </mat-menu>
   
       <button mat-button [matMenuTriggerFor]="appliancesMenu">
-        Appliances <mat-icon>arrow_drop_down</mat-icon>
+        <span class="font">Appliances</span> <mat-icon>arrow_drop_down</mat-icon>
       </button>
       <!-- Appliances Menu Dropdown Categories -->
       <mat-menu #appliancesMenu="matMenu">

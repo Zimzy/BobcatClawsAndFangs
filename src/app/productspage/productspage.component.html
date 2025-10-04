@@ -1,9 +1,10 @@
 
   <app-header></app-header>
-  <div>
-     <h3 class="productInfo">
+  <div class="container">
+    
+     <div class="productInfo">
       {{printProduct()}}
-     </h3>
+     </div>
    <!---- <img class="image" *ngFor="let image of this.product.Img_URL" [src]="image" alt="Product Image">-->
     <img class="image" [src]="this.product.Img_URL" alt="{{ this.product.Name }}">
        <h2 class="productInfo">${{  this.product.Price}}</h2>
