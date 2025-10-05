@@ -1,0 +1,62 @@
+.landing-container {
+  text-align: center;
+  margin-top: 100px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.landing-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #800000; /* Maroon */
+  margin-bottom: 10px;
+  text-shadow: 2px 2px #ccc;
+}
+
+.landing-subtitle {
+  font-size: 20px;
+  color: #666;
+  margin-bottom: 40px;
+}
+
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.landing-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.sign-in {
+  background-color: #800000; /* Maroon */
+  color: #FFD700; /* Gold */
+}
+
+.sign-in:hover {
+  background-color: #a00000;
+}
+
+.guest {
+  background-color: #888;
+  color: #fff;
+}
+
+.guest:hover {
+  background-color: #aaa;
+}
+
+.register {
+  background-color: #FFD700; /* Gold */
+  color: #800000; /* Maroon text */
+}
+
+.register:hover {
+  background-color: #ffea00;
+}
