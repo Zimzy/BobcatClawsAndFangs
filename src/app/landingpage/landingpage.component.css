@@ -1,13 +1,21 @@
 .landing-container {
   text-align: center;
-  margin-top: 100px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #B5974F;
+  /* background-image: url('/assets/bobcat-bg.png'); */
+  /* background-blend-mode: multiply; 
+  opacity: 0.95; */
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 40px 20px;
+  min-height: 500px;
 }
-
 .landing-title {
   font-size: 48px;
   font-weight: bold;
-  color: #800000; /* Maroon */
+  color: #800000;
   margin-bottom: 10px;
   text-shadow: 2px 2px #ccc;
 }
@@ -35,8 +43,8 @@
 }
 
 .sign-in {
-  background-color: #800000; /* Maroon */
-  color: #FFD700; /* Gold */
+  background-color: #800000;
+  color: #FFD700;
 }
 
 .sign-in:hover {
@@ -53,10 +61,31 @@
 }
 
 .register {
-  background-color: #FFD700; /* Gold */
-  color: #800000; /* Maroon text */
+  background-color: #FFD700;
+  color: #800000;
 }
 
 .register:hover {
   background-color: #ffea00;
+}
+.landing-top {
+  background-color: #000000;
+  height: 80px;
+  width: 100%;
+}
+.landing-white {
+  height: 200px;
+  background-color: white;
+  min-height: 400px;
+}
+
+.landing-gray {
+  height: 200px;
+  background-color: #595959;
+  min-height: 400px;
+}
+
+.landing-maroon {
+  height: 80px;
+  background-color: #3B0404;
 }
