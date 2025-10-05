@@ -10,6 +10,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatMenuModule } from '@angular/material/menu';
 import { MatFormFieldModule } from '@angular/material/form-field'; // Import MatFormFieldModule
 import { MatInputModule } from '@angular/material/input'; // Import MatInputModule
+import { LandingpageComponent } from './landingpage/landingpage.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProductspageComponent } from './productspage/productspage.component';
 import { MatGridListModule } from '@angular/material/grid-list';
@@ -34,6 +35,7 @@ import { MatSliderModule } from '@angular/material/slider';
     SearchBarComponent,
     HeaderComponent,
     QueryserviceComponent,
+    LandingpageComponent
   ],
   imports: [
     BrowserModule,
