@@ -1,0 +1,44 @@
+.header{
+    background-color: #501214;
+    color: white;
+}
+
+.labelHeader{
+    font-family:Brandon Grotesque;
+    padding-left: 5px;
+    font-size: large;
+}
+
+.home{
+        
+       font-family: Roboto Mono;
+        color:#f1f1f1;
+        background-color: #501214;
+        border-color: #AC9155;
+        border-style: hidden;
+        position: fixed;
+        top:10;
+        right:15px;
+        
+        text-align: center;
+        
+    }
+
+.home:hover{
+        border-style: solid;
+
+    }
+
+    .Title{
+        background-color: #501214;
+        border-style: none;
+        color: white;
+    }
+
+    .spacer{
+    flex: .5 1 auto;
+}
+
+.productInfo{
+    margin-left: 200px;
+}

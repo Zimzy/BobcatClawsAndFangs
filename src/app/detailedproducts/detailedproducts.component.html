@@ -1,8 +1,13 @@
+<!-- for products under the category menu -->
+
 <app-header></app-header>
   <div>
      <h3 class="productInfo">
       {{printProduct()}}
      </h3>
+     <button> 
+    <span class="labelHeader">Add to cart</span>
+  </button>
     <img class="image" *ngFor="let image of this.product.product.images" [src]="image" alt="Product Image">
        <h2 class="productInfo">{{this.product.offers.primary.currency_symbol + this.product.offers.primary.price}}</h2>
        <h2 class="productInfo">

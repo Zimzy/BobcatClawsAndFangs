@@ -1,0 +1,26 @@
+<mat-toolbar class="header">
+<mat-toolbar-row class="header">
+        <button class="Title" routerLink="/home">
+      <span class="labelHeader" >BOBCAT CLAWS</span>
+      </button>
+
+        <button class="home" routerLink="/home">
+          <span>HOME</span>
+        </button>
+        
+      <span class="spacer"></span>
+  
+        
+
+    </mat-toolbar-row>
+</mat-toolbar>
+
+<div>
+<!-- Products in cart -->
+  <li *ngFor="let product of bookmarkedProducts">
+<h4>{{ product.Name }}</h4>
+      
+
+</li>
+
+</div> 
