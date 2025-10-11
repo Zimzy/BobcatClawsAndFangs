@@ -1,7 +1,5 @@
 import { Component } from '@angular/core';
-import * as jsonData from '../assets/laptops.json'
 import { SaveProductService } from '../save-product.service';
-import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-detailedproducts',
   templateUrl: './detailedproducts.component.html',
@@ -42,6 +40,11 @@ export class DetailedproductsComponent {
           return Math.abs(searchResults.offers.primary.price - similarPrice) <= 50; // Adjust the price range as needed
       });
      
+  }
+
+  saveToCart(){
+    
+    this.saveProductService.saveCart();
   }
     
 }

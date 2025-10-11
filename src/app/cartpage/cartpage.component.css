@@ -40,5 +40,13 @@
 }
 
 .productInfo{
+    font-family: Roboto Mono;
     margin-left: 200px;
+}
+
+.image{
+    width: 200px;
+    margin-right: 200px;
+    margin-left: 200px;
+    height: 200px;
 }

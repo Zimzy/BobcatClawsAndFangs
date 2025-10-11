@@ -24,12 +24,17 @@ export class CartComponent implements OnInit{
       console.log('printing in cart ', this.bookmarkedProducts[i]);
       console.log('cart length:', this.bookmarkedProducts.length);
       
-      return this.bookmarkedProducts[i].Name; // needs work
+      return this.bookmarkedProducts[i]; // needs work
     }
     
   }
 
+  removeFromCart(product: any){
     
+    const index = this.bookmarkedProducts.indexOf(product);
+    this.bookmarkedProducts.splice(index,1);
+    
+  }
   
 
 

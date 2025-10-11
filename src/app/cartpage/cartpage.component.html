@@ -19,7 +19,13 @@
 <!-- Products in cart -->
   <li *ngFor="let product of bookmarkedProducts">
 <h4>{{ product.Name }}</h4>
+<img class="image" [src]="product.Img_URL">
+<h4>{{ product.Price }}</h4>
       
+
+<button class="Title" (click)="removeFromCart(product)">
+  <span>Remove from cart</span>
+</button>
 
 </li>
 
