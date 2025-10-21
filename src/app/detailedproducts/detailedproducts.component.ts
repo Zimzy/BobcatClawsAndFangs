@@ -6,6 +6,7 @@ import { SaveProductService } from '../save-product.service';
   styleUrls: ['./detailedproducts.component.css']
 })
 export class DetailedproductsComponent {
+ 
   product: any;
   searchResults = this.saveProductService.getCat();
   similarProducts: any[] = [];
@@ -44,6 +45,7 @@ export class DetailedproductsComponent {
 
   saveToCart(){
     
+    console.log("product:",this.saveProductService.productValue);
     this.saveProductService.saveCart();
   }
     

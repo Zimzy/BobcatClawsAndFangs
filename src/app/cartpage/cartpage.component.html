@@ -1,4 +1,5 @@
 <mat-toolbar class="header">
+  
 <mat-toolbar-row class="header">
         <button class="Title" routerLink="/home">
       <span class="labelHeader" >BOBCAT CLAWS</span>
@@ -8,25 +9,60 @@
           <span>HOME</span>
         </button>
         
-      <span class="spacer"></span>
-  
+     <span class="spacer"></span>
+  <app-search-bar></app-search-bar>
         
 
     </mat-toolbar-row>
+    <mat-toolbar-row class="items">
+      <button mat-icon-button class="icon" aria-label="Example icon-button with menu icon">
+      <mat-icon>menu</mat-icon>
+      </button>
+      <span class="all"> All </span>
+      <span class="spacer"></span>
+  
+      
+  
+      <button mat-button [matMenuTriggerFor]="electronicsMenu">
+        <span class="font">Electronics </span><mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      
+      <mat-menu #electronicsMenu="matMenu">
+        <button mat-menu-item (click)="onSelectSubCategory('Laptops and Accessories')"routerLink="/laptops">Laptops and Accessories</button>
+        <button mat-menu-item (click)="onSelectSubCategory('Audio and Headphones')" routerLink="/Headphones">Audio and Headphones</button>
+       
+      </mat-menu>
+  
+      <button mat-button [matMenuTriggerFor]="appliancesMenu">
+        <span class="font">Appliances</span> <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+     
+      <mat-menu #appliancesMenu="matMenu">
+     
+        <button mat-menu-item (click)="onSelectSubCategory('Coffee and Tea Makers')" routerLink="/coffee">Coffee and Tea Makers</button>
+       
+      </mat-menu>
+    </mat-toolbar-row>
 </mat-toolbar>
+<div class="spacer"></div>
+
+<h4>
+Product Count: {{ cartProcessed.length }}
+</h4>
 
 <div>
-<!-- Products in cart -->
-  <li *ngFor="let product of bookmarkedProducts">
-<h4>{{ product.Name }}</h4>
-<img class="image" [src]="product.Img_URL">
-<h4>{{ product.Price }}</h4>
-      
 
-<button class="Title" (click)="removeFromCart(product)">
-  <span>Remove from cart</span>
-</button>
+  <li class="product-container" *ngFor="let product of cartProcessed">
+    <div class="product-header">{{ product.Name }}</div>
 
+    <div class="product-row">
+      <div class="product-column">
+        <img [src]="product.image_URL">
+      </div>
+      <div class="product-column">{{ product.Price }}</div>
+
+      <button class="cart-button" (click)="removeFromCart(product)">Remove from cart</button>
+
+    </div>
 </li>
-
-</div> 
+</div>

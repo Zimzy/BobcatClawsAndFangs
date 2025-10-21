@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 
+
 @Injectable({
   providedIn: 'root'
 })
@@ -8,10 +9,12 @@ export class SaveProductService {
    productCategory: any;
    keyword: any;
    cart: any[] = [];
+   //cartDetail: any[] = [];
    // saves clicked on product for detailed product page functionality 
    saveProductService(value: any){
     this.productValue = value;
    }
+
 
    saveCart(){
     this.cart.push(this.productValue);
@@ -40,5 +43,7 @@ export class SaveProductService {
     console.log('value', this.productValue)
     return this.productValue;
    }
+
+   
   constructor() { }
 }

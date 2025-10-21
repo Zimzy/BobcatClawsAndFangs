@@ -24,6 +24,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ProductspageComponent } from './productspage/productspage.component';
 import { QueryserviceComponent } from './queryservice/queryservice.component';
 import { SearchBarComponent } from './search-bar/search-bar.component';
+
 @NgModule({
   declarations: [
     AppComponent,
