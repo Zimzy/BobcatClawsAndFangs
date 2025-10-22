@@ -12,8 +12,8 @@
      <h3 class="data">Buy Now</h3>
      <div class="space"></div>
 
-  <span class="container">
-  <div class="outline" *ngFor="let item of searchResults">
+  
+  <div class="container" *ngFor="let item of searchResults">
     
 
    <a href routerLink="/products" class="dataProductLink" (click)="saveProduct(item)">{{ item.Name }}</a>
@@ -27,5 +27,5 @@
 
 
 </div>
-</span> 
+ 
 </body>
