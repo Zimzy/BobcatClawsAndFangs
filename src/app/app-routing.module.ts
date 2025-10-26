@@ -8,7 +8,7 @@ import { HomepageComponent } from './homepage/homepage.component';
 import { ProductspageComponent } from './productspage/productspage.component';
 
 const routes: Routes = [
-  {path: '', component: HomepageComponent},
+  {path: '', component: LandingpageComponent},
   {path: 'products', component: ProductspageComponent},
   { path: 'landing', component: LandingpageComponent },
   {path: 'home', component: HomepageComponent},
