@@ -1,26 +1,26 @@
-.landing-container {
+/* .landing-container {
   text-align: center;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background-color: #B5974F;
+  background-color: #B5974F; */
   /* background-image: url('/assets/bobcat-bg.png'); */
   /* background-blend-mode: multiply; 
   opacity: 0.95; */
-  display: flex;
+  /* display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   padding: 40px 20px;
   min-height: 500px;
-}
-.landing-title {
+} */
+/* .landing-title {
   font-size: 48px;
   font-weight: bold;
   color: #800000;
   margin-bottom: 10px;
   text-shadow: 2px 2px #ccc;
-}
+} */
 
-.landing-subtitle {
+/* .landing-subtitle {
   font-size: 20px;
   color: #666;
   margin-bottom: 40px;
@@ -88,4 +88,89 @@
 .landing-maroon {
   height: 80px;
   background-color: #3B0404;
+} */
+ /* Full-page maroon background */
+/* Full-page maroon background */
+.landing-page {
+  background-color: #3B0404; /* Dark maroon */
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Center beige box */
+.landing-box {
+  background-color: #B5974F; /* Beige */
+  padding: 50px 50px;
+  border-radius: 12px;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Title (unchanged color from before) */
+.landing-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #800000;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px #ccc;
+}
+
+/* Subtitle */
+.landing-subtitle {
+  font-size: 20px;
+  color: #fff;
+  margin-bottom: 30px;
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;  /* Stack vertically */
+  align-items: stretch;    /* Make buttons equal width */
+  gap: 20px;               /* Even spacing between buttons */
+  width: 100%;             /* Ensure full width within the box */
+  max-width: 300px;        /* Optional: limit button width */
+  margin: 0 auto;          /* Center the buttons group */
+}
+
+.landing-btn {
+  padding: 15px 30px;
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  width: 100%;            /* Make each button full width of container */
+}
+
+.sign-in {
+  background-color: #800000;
+  color: #FFD700;
+}
+
+.sign-in:hover {
+  background-color: #a00000;
+}
+
+.guest {
+  background-color: #888;
+  color: #fff;
+}
+
+.guest:hover {
+  background-color: #aaa;
+}
+
+.register {
+  background-color: #FFD700;
+  color: #800000;
+}
+
+.register:hover {
+  background-color: #ffea00;
 }
