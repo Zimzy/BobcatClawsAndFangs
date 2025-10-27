@@ -1,6 +1,6 @@
 server {
 	listen 80;
-	server_name localhost;
+	server_name 3.137.203.22 www.bobcatclaws.com;
 	
 	location / {
 		proxy_pass http://localhost:8080;

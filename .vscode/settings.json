@@ -13,6 +13,20 @@
             "name": "bobcatclaws",
             "database": "bobcatclaws",
             "username": "admin"
+        },
+        {
+            "mysqlOptions": {
+                "authProtocol": "default",
+                "enableSsl": "Disabled"
+            },
+            "ssh": "Disabled",
+            "previewLimit": 50,
+            "server": "checkouttxst2025.c32o2uikczqc.us-east-2.rds.amazonaws.com",
+            "port": 3306,
+            "driver": "MySQL",
+            "name": "checkouttxst2025",
+            "database": "CheckoutTXST2025",
+            "username": "admin"
         }
     ]
 }

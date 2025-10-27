@@ -1,0 +1,107 @@
+.header{
+    background-color: #501214;
+    color: white;
+}
+
+.labelHeader{
+    font-family:Brandon Grotesque;
+    padding-left: 5px;
+    font-size: large;
+}
+
+.home{
+        
+       font-family: Roboto Mono;
+        color:#f1f1f1;
+        background-color: #501214;
+        border-color: #AC9155;
+        border-style: hidden;
+        position: fixed;
+        top:10;
+        right:15px;
+        
+        text-align: center;
+        
+    }
+
+.home:hover{
+        border-style: solid;
+
+    }
+
+    .Title{
+        background-color: #501214;
+        border-style: none;
+        color: white;
+    }
+
+    .spacer{
+      height: 10px;
+    flex: .5 1 auto;
+}
+
+.product-container{
+width: 75%;
+margin-left: 25px;
+  font-family: Roboto Mono;
+}
+
+.product-header {
+  
+  text-align: left;
+  font-size: 20px;
+}
+
+
+.product-row {
+  display: -webkit-flex;
+  display: flex;
+}
+
+
+.product-column {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  padding: 10px;
+  
+}
+
+.product-column img{
+    width: 200px;
+    margin-right: 200px;
+    margin-left: 20px;
+    height: 200px;
+}
+
+.product-container:hover{
+    border-color: #D7BD8A ;
+    border-style: solid;
+    background-color:#D7BD8A ;
+}
+
+
+.cart-button{
+  font-family: Roboto Mono;
+  width: 100px;
+  height: 80px;
+
+}
+
+.items{
+    font-family: Roboto Mono;
+    background-color: #AC9155;
+    color:white;
+    border-style: solid;
+    border-color: #AC9155;
+}
+
+.font{
+        font-family: Roboto Mono;
+    }
+/* @media (max-width: 600px) {
+  .product-row {
+    -webkit-flex-direction: column;
+    flex-direction: column;
+  }
+} */

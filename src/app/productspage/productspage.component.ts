@@ -6,13 +6,15 @@ import { SaveProductService } from '../save-product.service';
   styleUrls: ['./productspage.component.css']
 })
 export class ProductspageComponent implements OnInit {
+    
     product: any;
     searchResults = this.saveProductService.getCat();
     similarProducts: any[] = [];
     constructor(private saveProductService: SaveProductService){}
     ngOnInit() {
         this.product = this.saveProductService.getProduct();
-        this.similarProducts = this.getSimilarProducts()
+        this.similarProducts = this.getSimilarProducts();
+        
     }
 
     //TODO: Expand product details and functions to grab details.
@@ -40,4 +42,9 @@ export class ProductspageComponent implements OnInit {
       });
       console.log('similar products:', this.similarProducts)
   }
+  saveToCart(){
+    //console.log('saving to cart:', this.product.Name);
+    this.saveProductService.saveCart();
+  }
+  
 }

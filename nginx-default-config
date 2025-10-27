@@ -37,12 +37,12 @@ server {
 	#
 	include snippets/snakeoil.conf;
 
-	root /home/workspace/Software-Engineering-Project-Course/src;
+	root /home/zim/website/Bobcat/src;
 
 	# Add index.php to the list if you are using PHP
 	index index.html index.htm index.nginx-debian.html;
 
-	server_name 147.26.102.120;
+	server_name 3.137.203.22 www.bobcatclaws.com;
 
 	location / {
 		# First attempt to serve request as file, then
