@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { CartComponent } from './cartpage/cartpage.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { CoffeeMakersComponent } from './coffee-makers/coffee-makers.component';
 import { DetailedproductsComponent } from './detailedproducts/detailedproducts.component';
@@ -17,9 +16,7 @@ const routes: Routes = [
   {path: 'laptops', component: CategoryPageComponent},
   {path: 'Headphones',component: CategoryPageComponent},
   {path: 'coffee', component: CoffeeMakersComponent},
-  {path: 'detailedProducts', component: DetailedproductsComponent},
-  {path: 'cartpage', component: CartComponent}
-
+  {path: 'detailedProducts', component: DetailedproductsComponent}
 
   //TODO: path: 'cart', component: CartComponent. Seperate page for the user's cart
 

@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-//import { SearchService } from '../search.service'; // Adjust the path as necessary
+import { SearchService } from '../search.service'; // Adjust the path as necessary
 
 @Component({
   selector: 'app-search-bar',
@@ -7,7 +7,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./search-bar.component.css']
 })
 export class SearchBarComponent {
- //constructor(private searchService: SearchService, ){}
   searchQuery: string = '';
 
   onSearch(query: string) {
@@ -19,6 +18,5 @@ export class SearchBarComponent {
   submitSearch() {
     console.log('Submit search for:', this.searchQuery);
     // Add your search submission logic here
-    //return this.searchService.search(this.searchQuery);
   }
 }

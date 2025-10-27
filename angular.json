@@ -21,7 +21,6 @@
           "options": {
             "outputPath": "dist/Client-Contacts-Manager-Angular",
             "index": "src/index.html",
-            
             "main": "src/main.ts",
             
             "tsConfig": "tsconfig.app.json",

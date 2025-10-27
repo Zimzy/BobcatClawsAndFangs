@@ -31,21 +31,3 @@
 .productInfo{
     margin-left: 200px;
 }
-
-.Cart{
-        font-family: Roboto Mono;
-        color:#f1f1f1;
-        background-color:#D7BD8A;
-        border-color: #AC9155;
-        border-style: hidden;
-        
-        
-        
-        text-align: center;
-        
-    }
-
-    .Cart:hover{
-        border-style: solid;
-
-    }

@@ -1,16 +1,15 @@
 .header{
-    background-color: #501214;
+    background-color: black;
     color: white;
 }
 .items{
-    font-family: Roboto Mono;
-    background-color: #AC9155;
+    background-color: #232f3e;
     color:white;
-    border-style: solid;
-    border-color: #AC9155;
+    border-style:double;
+    border-color: black;
 }
 .icon{
-    background-color: #AC9155;
+    background-color: #232f3e;
     border-style: none;
     color: white;
 }
@@ -19,9 +18,8 @@
 
 }
 .labelHeader{
-    font-family:Brandon Grotesque;
     padding-left: 5px;
-    font-size: large;
+    font-size: medium;
 }
 .spacer{
     flex: .5 1 auto;
@@ -33,19 +31,18 @@
 }
 .Products{
   padding-left: 650px;
-  border-style: solid;
+  border-style: double;
  
 }
 
 .data{
-    font-family: Roboto Mono;
     text-align: left;
     margin-right: 400px;
     margin-left: 400px;
 }
 .outline:hover{
-    border-style: solid;
-    border-color: #D7BD8A;
+    border-style: double;
+    border-color: blue;
 }
 .image{
     width: 200px;
@@ -55,18 +52,17 @@
 }
 .laptop{
     border-style: none;
-    background-color: #501214 ;
+    background-color: white ;
     margin-left: 150px;
     font-size: x-large;
     text-align: center;
    
 }
 .laptop:hover{
-    border-style: solid;
-    border-color: #501214;
+    border-style: double;
+    border-color: black;
 }
 .sidenav {
-    
     height: 100%;
     width: 160px;
     position: fixed;
@@ -87,10 +83,9 @@
   }
   
   .sidenav a:hover {
-    color: #D7BD8A;
+    color: #f1f1f1;
   }
   .horizontal-mat-list-item {
-    
     float: right;
     display: list-item;
    
@@ -102,36 +97,13 @@
         border: 1px solid yellow;
       }
       .Title{
-        background-color: #501214;
+        background-color: #000000;
         border-style: none;
         color: white;
     }
    
     .Title:hover{
         border-color: azure;
-        border-style: hidden;
+        border-style: double;
         border-radius: 10px;
-    }
-
-    .Cart{
-        font-family: Roboto Mono;
-        color:#f1f1f1;
-        background-color: #501214;
-        border-color: #AC9155;
-        border-style: hidden;
-        position: fixed;
-        top:10;
-        right:15px;
-        
-        text-align: center;
-        
-    }
-
-    .Cart:hover{
-        border-style: solid;
-
-    }
-
-    .font{
-        font-family: Roboto Mono;
     }
