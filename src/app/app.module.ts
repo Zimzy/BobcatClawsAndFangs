@@ -16,6 +16,16 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { CartComponent } from './cartpage/cartpage.component';
+import { MatIconModule } from '@angular/material/icon';
+import { MatButtonModule } from '@angular/material/button';
+import { MatMenuModule } from '@angular/material/menu';
+import { MatFormFieldModule } from '@angular/material/form-field'; // Import MatFormFieldModule
+import { MatInputModule } from '@angular/material/input'; // Import MatInputModule
+import { LandingpageComponent } from './landingpage/landingpage.component';
+import { HomepageComponent } from './homepage/homepage.component';
+import { ProductspageComponent } from './productspage/productspage.component';
+import { MatGridListModule } from '@angular/material/grid-list';
+import { MatDividerModule } from '@angular/material/divider';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { CoffeeMakersComponent } from './coffee-makers/coffee-makers.component';
 import { DetailedproductsComponent } from './detailedproducts/detailedproducts.component';
@@ -37,6 +47,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     HeaderComponent,
     QueryserviceComponent,
     CartComponent,
+    LandingpageComponent
   ],
   imports: [
     BrowserModule,

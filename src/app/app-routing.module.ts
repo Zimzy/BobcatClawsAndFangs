@@ -4,12 +4,14 @@ import { CartComponent } from './cartpage/cartpage.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
 import { CoffeeMakersComponent } from './coffee-makers/coffee-makers.component';
 import { DetailedproductsComponent } from './detailedproducts/detailedproducts.component';
+import { LandingpageComponent } from './landingpage/landingpage.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProductspageComponent } from './productspage/productspage.component';
 
 const routes: Routes = [
-  {path: '', component: HomepageComponent},
+  {path: '', component: LandingpageComponent},
   {path: 'products', component: ProductspageComponent},
+  { path: 'landing', component: LandingpageComponent },
   {path: 'home', component: HomepageComponent},
   {path: 'categories', component: CategoryPageComponent},
   {path: 'laptops', component: CategoryPageComponent},
