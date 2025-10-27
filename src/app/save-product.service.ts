@@ -9,7 +9,7 @@ export class SaveProductService {
    productCategory: any;
    keyword: any;
    cart: any[] = [];
-   //cartDetail: any[] = [];
+   
    // saves clicked on product for detailed product page functionality 
    saveProductService(value: any){
     this.productValue = value;

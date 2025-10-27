@@ -1,3 +1,7 @@
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
 <mat-toolbar class="header">
   
 <mat-toolbar-row class="header">
@@ -44,25 +48,44 @@
       </mat-menu>
     </mat-toolbar-row>
 </mat-toolbar>
-<div class="spacer"></div>
 
-<h4>
-Product Count: {{ cartProcessed.length }}
-</h4>
 
-<div>
+
+
+
+<div class="grid-container">
+  <div class="cart-info">
+<h5>Product Count: {{ cartProcessed.length }}</h5>
+
+<h5 class="bottom">Subtotal: {{priceSum()}}</h5>
+</div>
+
+
+
+</div>
+
 
   <li class="product-container" *ngFor="let product of cartProcessed">
-    <div class="product-header">{{ product.Name }}</div>
 
-    <div class="product-row">
-      <div class="product-column">
+    <div class="row">
+      <span>
         <img [src]="product.image_URL">
-      </div>
-      <div class="product-column">{{ product.Price }}</div>
+      
+     
+    <a href routerLink={{product.Route}}>{{ product.Name }}</a> 
+    
+    <button class="cart-button" (click)="removeFromCart(product)">
+        <i class="bi bi-x-lg"></i>
+        </button>
+        
+    
+      
+      <h5>Price: {{ product.Currency_symbol }}{{ product.Price }}</h5>
 
-      <button class="cart-button" (click)="removeFromCart(product)">Remove from cart</button>
+      
 
+    
+    </span>
     </div>
+    
 </li>
-</div>
