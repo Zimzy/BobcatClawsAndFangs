@@ -19,10 +19,8 @@
 
     </mat-toolbar-row>
     <mat-toolbar-row class="items">
-      <button mat-icon-button class="icon" aria-label="Example icon-button with menu icon">
-      <mat-icon>menu</mat-icon>
-      </button>
-      <span class="all"> All </span>
+      
+      
       <span class="spacer"></span>
   
       
@@ -73,6 +71,7 @@
       
      
     <a href routerLink={{product.Route}}>{{ product.Name }}</a> 
+    
     
     <button class="cart-button" (click)="removeFromCart(product)">
         <i class="bi bi-x-lg"></i>

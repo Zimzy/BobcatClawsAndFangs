@@ -12,20 +12,20 @@
      <h3 class="data">Buy Now</h3>
      <div class="space"></div>
 
-  
-  <div class="container" *ngFor="let item of searchResults">
+  <div class="grid-container"  >
+  <div class="grid-item" href routerLink="/products" (click)="saveProduct(item)" *ngFor="let item of searchResults">
     
 
-   <a href routerLink="/products" class="dataProductLink" (click)="saveProduct(item)">{{ item.Name }}</a>
+   <h5>{{ item.Name }}</h5>
     <!---<button class="laptop" (click)="saveProduct()" routerLink="/products"> <h3 class="data">{{ item.product.title }}</h3></button>-->
  
-  <p class="dataProduct">{{this.store}}</p>
+  
  <!---- <img class="image" *ngFor="let image of item.Img_URL" [src]="image" alt="Product Image">-->
- <img class="image" [src]="item.Img_URL" alt="{{ item.Name }}">
+ <img [src]="item.Img_URL" alt="{{ item.Name }}">
  
-  <h2 class="dataProduct">${{ item.Price }}</h2>
+  
 
 
 </div>
- 
+ </div>
 </body>

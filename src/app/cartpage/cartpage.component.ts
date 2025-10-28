@@ -12,7 +12,7 @@ import { ToolbarRouteService } from '../toolbar-route.service';
 export class CartComponent implements OnInit{
   constructor(private saveProductService: SaveProductService, private toolbarRouteService: ToolbarRouteService ){}
   data: any = jsonData;
-  
+  store: any = this.data.Best_Buy.Name;
   cartProcessed: any[] = [];
   
 
@@ -59,7 +59,7 @@ onSelectSubCategory(subCat: string){
       }
       else if (this.saveProductService.cart[i].Keywords) {
         let item: product = {"Name": this.saveProductService.cart[i].Name, "Currency_symbol": "$","Price": this.saveProductService.cart[i].Price, 
-          "image_URL": this.saveProductService.cart[i].Img_URL, "Route": "/products", "Seller": ""};
+          "image_URL": this.saveProductService.cart[i].Img_URL, "Route": "/products", "Seller": this.store};
           this.saveProductService.cart[i] = item;
           
       }
@@ -106,6 +106,6 @@ onSelectSubCategory(subCat: string){
       sum+= this.cartProcessed[i].Price;
   }
   let sum2=(Math.round(sum * 100) / 100).toFixed(2);
-return sum2;
+  return sum2;
   }
 }
