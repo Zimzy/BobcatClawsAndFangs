@@ -2,52 +2,68 @@
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
 </head>
 
-<mat-toolbar class="header">
+<body class="bg">
+
   
-<mat-toolbar-row class="header">
+<mat-toolbar>
+    <mat-toolbar-row class="header">
         <button class="Title" routerLink="/home">
       <span class="labelHeader" >BOBCAT CLAWS</span>
-      </button>
-
+      
+        </button>
         <button class="home" routerLink="/home">
           <span>HOME</span>
         </button>
         
-     <span class="spacer"></span>
-  <app-search-bar></app-search-bar>
-        
-
+      <span class="spacer"></span>
+  
+      <app-search-bar></app-search-bar>
+  
     </mat-toolbar-row>
     <mat-toolbar-row class="items">
       
-      
       <span class="spacer"></span>
   
-      
+      <!-- button mat-button [matMenuTriggerFor]="accessoriesMenu">
+        Accessories <mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <!-- Accessories Menu Dropdown Categories -->
+      <!--mat-menu #accessoriesMenu="matMenu" -->
+        <!-- button mat-menu-item (click)="onSelectSubCategory('Bedding and Linens')"routerLink="/categories">Bedding and Linens</button>
+        <button mat-menu-item (click)="onSelectSubCategory('Desk Supplies')"routerLink="/categories">Desk Supplies</button>
+        <button mat-menu-item (click)="onSelectSubCategory('Room Decor')"routerLink="/categories">Room Decor</button>
+        <button mat-menu-item (click)="onSelectSubCategory('Storage Solutions')"routerLink="/categories">Storage Solutions</button>
+        <button mat-menu-item (click)="onSelectSubCategory('Kitchen and Dining')"routerLink="/categories">Kitchen and Dining</button>
+        <!-- ... Add more items for Accessories subcategories ... -->
+      <!-- /mat-menu -->
   
       <button mat-button [matMenuTriggerFor]="electronicsMenu">
         <span class="font">Electronics </span><mat-icon>arrow_drop_down</mat-icon>
       </button>
-      
+      <!-- Electronics Menu Dropdown Categories -->
       <mat-menu #electronicsMenu="matMenu">
         <button mat-menu-item (click)="onSelectSubCategory('Laptops and Accessories')"routerLink="/laptops">Laptops and Accessories</button>
         <button mat-menu-item (click)="onSelectSubCategory('Audio and Headphones')" routerLink="/Headphones">Audio and Headphones</button>
-       
+       <!--<button mat-menu-item (click)="onSelectSubCategory('Gaming and Entertainment')" routerLink="/categories">Gaming and Entertainment</button>
+        <button mat-menu-item (click)="onSelectSubCategory('Smart Home Devices')" routerLink="/categories">Smart Home Devices</button>
+        <button mat-menu-item (click)="onSelectSubCategory('Cables and Adapters')" routerLink="/categories">Cables and Adapters</button>-->
+        <!-- ... Add more items for Electronics subcategories ... -->
       </mat-menu>
   
       <button mat-button [matMenuTriggerFor]="appliancesMenu">
         <span class="font">Appliances</span> <mat-icon>arrow_drop_down</mat-icon>
       </button>
-     
+      <!-- Appliances Menu Dropdown Categories -->
       <mat-menu #appliancesMenu="matMenu">
-     
+        <!--<button mat-menu-item (click)="onSelectSubCategory('Mini Fridges')" routerLink="/categories" >Mini Fridges</button>
+        <button mat-menu-item (click)="onSelectSubCategory('Microwaves and Cooking Appliances')" routerLink="/categories">Microwaves and Cooking Appliances</button>-->
         <button mat-menu-item (click)="onSelectSubCategory('Coffee and Tea Makers')" routerLink="/coffee">Coffee and Tea Makers</button>
-       
+       <!---- <button mat-menu-item (click)="onSelectSubCategory('Laundry and Cleaning Appliances')"routerLink="/categories">Laundry and Cleaning Appliances</button>
+        <button mat-menu-item (click)="onSelectSubCategory('Heating and Cooling')" routerLink="/categories">Heating and Cooling</button>-->
+        <!-- ... Add more items for Appliances subcategories ... -->
       </mat-menu>
     </mat-toolbar-row>
-</mat-toolbar>
-
-
+  </mat-toolbar>
 
 
 
@@ -63,14 +79,15 @@
 </div>
 
 
-  <li class="product-container" *ngFor="let product of cartProcessed">
+  <li class="product-container" href routerLink={{product.Route}} *ngFor="let product of cartProcessed">
 
     <div class="row">
+      <h5> {{ product.Name }}</h5> 
       <span>
         <img [src]="product.image_URL">
       
      
-    <a href routerLink={{product.Route}}>{{ product.Name }}</a> 
+    
     
     
     <button class="cart-button" (click)="removeFromCart(product)">
@@ -88,3 +105,4 @@
     </div>
     
 </li>
+</body>

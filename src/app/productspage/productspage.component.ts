@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import * as jsonData from 'src/assets/db_data.json';
 import { SaveProductService } from '../save-product.service';
 @Component({
   selector: 'app-productspage',
@@ -6,14 +7,18 @@ import { SaveProductService } from '../save-product.service';
   styleUrls: ['./productspage.component.css']
 })
 export class ProductspageComponent implements OnInit {
-    
+    data: any = jsonData;
     product: any;
     searchResults = this.saveProductService.getCat();
     similarProducts: any[] = [];
+
     constructor(private saveProductService: SaveProductService){}
+
     ngOnInit() {
         this.product = this.saveProductService.getProduct();
         this.similarProducts = this.getSimilarProducts();
+
+        
         
     }
 
@@ -36,6 +41,7 @@ export class ProductspageComponent implements OnInit {
     }
     getSimilarProducts() {
       // Filter similar products based on price
+      console.log("similar products list: ",this,this.similarProducts);
       const similarPrice = this.product.Price;
       return this.similarProducts = this.searchResults.filter((searchResults: any) => {
           return Math.abs(searchResults.Price - similarPrice) <= 50; // Adjust the price range as needed
@@ -45,6 +51,14 @@ export class ProductspageComponent implements OnInit {
   saveToCart(){
     //console.log('saving to cart:', this.product.Name);
     this.saveProductService.saveCart();
+  }
+
+   saveProduct(value: any){
+    console.log('saving ', value);
+   
+    this.saveProductService.saveProductService(value);
+    this.product = this.saveProductService.getProduct();
+    this.similarProducts = this.getSimilarProducts();
   }
   
 }

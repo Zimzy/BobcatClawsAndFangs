@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
+import * as jsonData from 'src/assets/db_data.json';
 import { SaveProductService } from '../save-product.service';
-import * as jsonData from '../assets/db_data.json'
-import { HeaderComponent } from '../header/header.component';
 @Component({
   selector: 'app-coffee-makers',
   templateUrl: './coffee-makers.component.html',

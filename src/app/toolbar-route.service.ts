@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import * as jsonData from '../app/assets/db_data.json';
+import * as jsonData from 'src/assets/db_data.json';
 import { SaveProductService } from './save-product.service';
 
 @Injectable({

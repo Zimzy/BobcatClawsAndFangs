@@ -43,14 +43,22 @@
     flex: .5 1 auto;
 }
 
+.bg{
+
+  background-color: white;
+  margin: auto;
+    width: auto;
+    height: 2000px;
+}
 
 .cart-button{
-  
+  position: relative;
   width: 40px;
   height: 40px;
   font-family: Roboto Mono;
   cursor: pointer;
   border: #fceed2;
+  z-index: 10;
 
 }
 
@@ -88,9 +96,13 @@
   position: relative;
 }
 
+.row:hover{
+  cursor: pointer;
+  background-color:#fceed2;
+}
 
 
-.row span {
+.row {
   position: relative;
   z-index: 2;
 }
@@ -127,7 +139,7 @@
   right: -1px;
   width: 1px;
   z-index: 2;
-  background-color: #fff;
+  
 }
 
 .row:nth-child(5n+5)::after {
@@ -138,12 +150,10 @@
   z-index: 3;
   width: auto;
   top: auto;
-  background-color: #fff;
+ 
 }
 
-.row:hover::before {
-  background-color:#D7BD8A;
-}
+
 
 
 
@@ -155,6 +165,7 @@
   right:0px;
   width:23%;
   height:80%;
+  margin-top:5px;
   
   
 }
@@ -166,10 +177,12 @@
 .cart-info{
   display:grid;
   font-family: Roboto Mono;
-  border-color: #fceed2;
+  border-color:#501214;
   border-style: solid;
+  border-width: thin;
   margin-right: 8px;
   padding: 5px;
+  background-color:#fff8ed;
 }
 
 

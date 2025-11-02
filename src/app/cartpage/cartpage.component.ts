@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import * as jsonData from '../assets/db_data.json';
+import * as jsonData from 'src/assets/db_data.json';
 import { SaveProductService } from '../save-product.service';
 import { ToolbarRouteService } from '../toolbar-route.service';
 
@@ -51,7 +51,7 @@ onSelectSubCategory(subCat: string){
       
       if (this.saveProductService.cart[i].offers){
 
-        let item: product = {"Name": this.saveProductService.cart[i].product.title, "Currency_symbol": this.saveProductService.cart[i].offers.primary.Currency_Symbol,"Price": this.saveProductService.cart[i].offers.primary.price, 
+        let item: product = {"Name": this.saveProductService.cart[i].product.title, "Currency_symbol": "$","Price": this.saveProductService.cart[i].offers.primary.price, 
           "image_URL": this.saveProductService.cart[i].product.main_image, "Route": "/detailedProducts", "Seller": this.saveProductService.cart[i].offers.primary.seller.name};
         this.saveProductService.cart[i] = item;
         //console.log('product: ', this.cartProcessed[i].Name);

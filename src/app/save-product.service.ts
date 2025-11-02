@@ -34,13 +34,14 @@ export class SaveProductService {
    //saves JSON of category for categories page
    saveCatService(value: any){
     this.productCategory = value;
-    console.log('cat',this.productCategory)
+    //console.log('cat',this.productCategory)
    }
    getCat(){
+    console.log("Cat:",this.productCategory);
     return this.productCategory;
    }
    getProduct(){
-    console.log('value', this.productValue)
+    //console.log('value', this.productValue)
     return this.productValue;
    }
 

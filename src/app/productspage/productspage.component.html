@@ -1,32 +1,54 @@
 
+<head>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css">
+</head>
+
+
   <app-header></app-header>
-  <div>
-     <h3 class="productInfo">
-      {{printProduct()}}
-     </h3>
-   <!---- <img class="image" *ngFor="let image of this.product.Img_URL" [src]="image" alt="Product Image">-->
-    <img class="image" [src]="this.product.Img_URL" alt="{{ this.product.Name }}">
-       <h2 class="productInfo">${{  this.product.Price}}</h2>
-       <h2 class="productInfo">
-          From:  {{this.product.Name}}
-       </h2>
+
+
+
+  <div class="product-container-main">
+
+
+    <div class="grid-container">
+  <div class="product-info">
+    ${{  this.product.Price}}
+
+
+    <div class="bottom">
+  <button class="cart-button" (click)="saveToCart()">Add to cart</button>
+  </div>
+  
+  </div>
+</div>
+
+
+    <div class="row">
+     <h5>
+      {{printProduct()}}</h5>
+   
+    <img [src]="this.product.Img_URL" alt="{{ this.product.Name }}">
+       
+       
 
       <a href="{{this.product.URL}}" class="productInfo">BUY NOW </a>
+
+      </div>
   </div>
 
-  <button (click)="saveToCart()"> 
-    <span class="Cart">Add to cart</span>
-  </button>
 
-  <div>
+  <div class="test">
     <!-- Similar Products -->
-    <h3>Similar Products</h3>
-    <ul>
-      <li *ngFor="let similarProduct of similarProducts">
-        <h4>{{ similarProduct.Name }}</h4>
-        <img class="image" [src]="similarProduct.Img_URL" alt="{{ similarProduct.Name }}">
+    <h3 style="margin-left:30px;">Similar Products</h3>
+    <ul class="carousel">
+      <li class="list-item" href routerLink="/products" (click)="saveProduct(similarProduct) "  *ngFor="let similarProduct of similarProducts">
+        <h5>{{ similarProduct.Name }}</h5>
+        <img [src]="similarProduct.Img_URL" alt="{{ similarProduct.Name }}">
         <p>Price: ${{ similarProduct.Price }}</p>
         <a href="{{ similarProduct.URL }}">BUY NOW</a>
       </li>
     </ul>
   </div>
+
+ 

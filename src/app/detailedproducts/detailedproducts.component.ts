@@ -36,6 +36,7 @@ export class DetailedproductsComponent {
     // Existing methods 
     getSimilarProducts() {
       // Filter similar products based on price
+      console.log("similar products list: ",this,this.similarProducts);
       const similarPrice = this.product.offers.primary.price;
       return this.similarProducts = this.searchResults.filter((searchResults: any) => {
           return Math.abs(searchResults.offers.primary.price - similarPrice) <= 50; // Adjust the price range as needed
@@ -47,6 +48,14 @@ export class DetailedproductsComponent {
     
     console.log("product:",this.saveProductService.productValue);
     this.saveProductService.saveCart();
+  }
+
+  saveProduct(value: any){
+    console.log('saving ', value);
+   
+    this.saveProductService.saveProductService(value);
+    this.product = this.saveProductService.getProduct();
+    this.similarProducts = this.getSimilarProducts();
   }
     
 }

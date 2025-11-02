@@ -1,39 +1,56 @@
 <!-- for products under the category menu -->
 
 <app-header></app-header>
-  <div>
-     <h3 class="productInfo">
-      {{printProduct()}}
-     </h3>
 
-     <button (click)="saveToCart()"> 
-    <span class="Cart">Add to cart</span>
-    </button>
-    
-    <img class="image" *ngFor="let image of this.product.product.images" [src]="image" alt="Product Image">
-       <h2 class="productInfo">{{this.product.offers.primary.currency_symbol + this.product.offers.primary.price}}</h2>
-       <h2 class="productInfo">
-          From:  {{this.product.offers.primary.seller.name}}
-       </h2>
-       <h2 class="productInfo">
-          Overall Rating: {{this.product.product.rating}}
-       </h2>
-       <h2 class="productInfo">
-          Total Ratings: {{this.product.product.ratings_total}}
-       </h2>
-       <h3 class="productInfo">In Stock: {{inStock()}} </h3>
-      <a href="{{this.product.product.link}}" class="productInfo">BUY NOW </a>
+  <div class="product-container-main">
+
+   <div class="grid-container">
+
+     <div class="product-info">
+      ${{product.offers.primary.price}}
+     </div>
+
+     <div class="bottom">
+  <button class="cart-button" (click)="saveToCart()">Add to cart</button>
   </div>
 
-  <div>
+     </div>
+  
+    
+     <div class="row">
+
+   <h5>
+      {{printProduct()}}</h5>
+
+    <img *ngFor="let image of this.product.product.images" [src]="image" alt="Product Image">
+       
+       <h5>
+          From:  {{this.product.offers.primary.seller.name}}
+       </h5>
+       <h5>
+          Overall Rating: {{this.product.product.rating}}
+       </h5>
+       <h5>
+          Total Ratings: {{this.product.product.ratings_total}}
+       </h5>
+       <h5>In Stock: {{inStock()}} </h5>
+      <a href="{{this.product.product.link}}" class="productInfo">BUY NOW </a>
+      </div>
+</div>
+
+   
+
+  <div class="test">
    <!-- Similar Products -->
-   <h3>Similar Products</h3>
-   <ul>
-     <li *ngFor="let similarProduct of similarProducts">
-       <h4>{{ similarProduct.product.title }}</h4>
-       <img class="image" [src]="similarProduct.product.images" alt="{{ similarProduct.Name }}">
+   <h3 style="margin-left:30px;">Similar Products</h3>
+   <ul class="carousel">
+     <li class="list-item" href routerLink="/detailedProducts" (click)="saveProduct(similarProduct) " *ngFor="let similarProduct of similarProducts">
+       <h5>{{ similarProduct.product.title }}</h5>
+       <img [src]="similarProduct.product.images" alt="{{ similarProduct.Name }}">
        <p>Price: ${{ similarProduct.offers.primary.price }}</p>
        <a href="{{ similarProduct.product.link }}">BUY NOW</a>
      </li>
    </ul>
  </div>
+
+  

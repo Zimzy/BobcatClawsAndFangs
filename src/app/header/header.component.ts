@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import * as jsonData from '../assets/db_data.json';
+import * as jsonData from 'src/assets/db_data.json';
 import { SaveProductService } from '../save-product.service';
 import { ToolbarRouteService } from '../toolbar-route.service';
 
