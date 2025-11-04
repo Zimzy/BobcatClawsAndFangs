@@ -21,6 +21,7 @@ import { CategoryPageComponent } from './category-page/category-page.component';
 import { CoffeeMakersComponent } from './coffee-makers/coffee-makers.component';
 import { DetailedproductsComponent } from './detailedproducts/detailedproducts.component';
 import { HeaderComponent } from './header/header.component';
+import { LandingpageComponent } from './landingpage/landingpage.component';
 import { HomepageComponent } from './homepage/homepage.component';
 import { ProductspageComponent } from './productspage/productspage.component';
 import { QueryserviceComponent } from './queryservice/queryservice.component';
@@ -38,6 +39,7 @@ import { SearchBarComponent } from './search-bar/search-bar.component';
     HeaderComponent,
     QueryserviceComponent,
     CartComponent,
+    LandingpageComponent
   ],
   imports: [
     BrowserModule,
