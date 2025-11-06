@@ -97,3 +97,44 @@
   .range{
     width: 300px
   }
+ 
+ /* CATEGORY GRID FIX — mimic homepage layout */
+.grid-container {
+  display: grid !important;
+  grid-template-columns: repeat(3, 1fr) !important;
+  grid-auto-rows: auto !important;
+  gap: 40px 20px !important; /* spacing between grid items */
+  margin: auto !important;
+  width: auto !important;
+}
+
+.grid-item {
+  font-family: Roboto Mono !important;
+  text-align: center !important;
+  margin: 20px !important;
+  width: 400px !important;
+  height: auto !important;
+  padding: 10px !important;
+}
+
+.grid-item:hover {
+  background-color: #fceed2 !important;
+  cursor: pointer !important;
+}
+
+.grid-item img {
+  display: block !important;
+  width: 300px !important;
+  height: 300px !important;
+  margin: 20px auto 0 auto !important;
+  object-fit: contain !important;
+}
+
+/* .grid-item p, .grid-item h2, .grid-item h5 {
+  font-family: Roboto Mono !important;
+  text-align: center !important;
+  margin: 5px 0 !important;
+} */
+ .grid-item p, .grid-item h2, .grid-item h5 {
+  margin: 5px 0 !important;  /* spacing between texts */
+}
