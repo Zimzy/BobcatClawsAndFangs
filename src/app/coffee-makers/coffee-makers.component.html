@@ -2,7 +2,8 @@
   <app-header></app-header>
   <div class="space"></div>
    <h3 class="type">{{this.typeProduct}}</h3>
-   <div class="outline" *ngFor="let item of (filteredProducts.length > 0 ? filteredProducts : searchResults)">
+   <div class="grid-container">
+  <div class="grid-item"  *ngFor="let item of (filteredProducts.length > 0 ? filteredProducts : searchResults)">
     <!---<button class="laptop" (click)="saveProduct()" routerLink="/products"> <h3 class="data">{{ item.product.title }}</h3></button>-->
     <a href routerLink="/products" class="laptop" (click)="saveProduct(item)">{{ item.Name }}</a>
     <p class="data">From {{this.store}}</p>
