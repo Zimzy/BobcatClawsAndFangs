@@ -108,4 +108,7 @@ onSelectSubCategory(subCat: string){
   let sum2=(Math.round(sum * 100) / 100).toFixed(2);
   return sum2;
   }
+ printPage(): void {
+    window.print();
+  } 
 }

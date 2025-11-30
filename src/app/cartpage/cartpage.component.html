@@ -70,20 +70,23 @@
 <div class="grid-container">
   <div class="cart-info">
 <h5>Product Count: {{ cartProcessed.length }}</h5>
+<!-- </span> -->
 
-<h5 class="bottom">Subtotal: {{priceSum()}}</h5>
+<!-- <h5 class="bottom">Subtotal: {{priceSum()}}</h5>
+<button class="print-btn" (click)="printPage()">Print Page</button> -->
 </div>
 
 
 
+
 </div>
 
-
+<ul>
   <li class="product-container" href routerLink={{product.Route}} *ngFor="let product of cartProcessed">
 
     <div class="row">
       <h5> {{ product.Name }}</h5> 
-      <span>
+      <!-- <span> -->
         <img [src]="product.image_URL">
       
      
@@ -101,8 +104,15 @@
       
 
     
-    </span>
+    <!-- </span> -->
     </div>
+    </li>
+</ul>
+
+<div class="cart-footer">
+  <h5 class="bottom">Subtotal: {{priceSum()}}</h5>
+  <button type="button" (click)="printPage()">Print Page</button>
+</div>
     
-</li>
+<!-- </li> -->
 </body>
