@@ -202,5 +202,23 @@
   object-fit: contain;
 }
 
+.cart-footer {
+  display: flex;
+  justify-content: space-between; /* subtotal left, button right */
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #fff8ed; /* optional */
+}
 
+.cart-footer .landing-btn {
+  width: auto; /* prevents full width */
+  padding: 15px 30px; /* same as landing page button */
+  font-size: 18px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  background-color: #501214;
+  color: #D7BD8A;
+}
 
