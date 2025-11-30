@@ -3,10 +3,10 @@ const path = require('path');
 
 const app = express();
 
-app.use(express.static(path.join(__dirname, '/dist/product-comparison-')));
+app.use(express.static(path.join(__dirname, '/dist/Client-Contacts-Manager-Angular')));
 
 app.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '/dist/product-comparison-/index.html'));
+  res.sendFile(path.join(__dirname, '/dist/Client-Contacts-Manager-Angular/index.html'));
 });
 
 // Default port
