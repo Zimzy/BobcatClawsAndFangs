@@ -82,17 +82,12 @@
 </div>
 
 <ul>
-  <li class="product-container" href routerLink={{product.Route}} *ngFor="let product of cartProcessed">
+  <li class="product-container" href routerLink={{product.Route}} *ngFor="let product of cartProcessed; let i = index">
 
     <div class="row">
       <h5> {{ product.Name }}</h5> 
       <!-- <span> -->
         <img [src]="product.image_URL">
-      
-     
-    
-    
-    
     <button class="cart-button" (click)="removeFromCart(product)">
         <i class="bi bi-x-lg"></i>
         </button>
@@ -101,8 +96,21 @@
       
       <h5>Price: {{ product.Currency_symbol }}{{ product.Price }}</h5>
 
-      
-
+      <div class="cart-qty">
+    <label [for]="'qty-' + i">Qty:</label>
+    <select
+      [id]="'qty-' + i"
+      [value]="product.Quantity"
+      (change)="onQuantityChange(product, $any($event.target).value)">
+      <option *ngFor="let q of quantities" [value]="q">
+        {{ q }}
+      </option>
+    </select>
+  </div>
+<h5>
+    Item total:
+    {{ product.Currency_symbol }}{{ product.Price * (product.Quantity || 1) }}
+  </h5>
     
     <!-- </span> -->
     </div>

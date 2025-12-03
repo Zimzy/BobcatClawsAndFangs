@@ -222,3 +222,19 @@
   color: #D7BD8A;
 }
 
+.cart-qty {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-family: Roboto Mono;
+}
+
+.cart-qty select {
+  padding: 4px 8px;
+  border-radius: 4px;
+  border: 1px solid #AC9155;
+  background-color: #fff8ed;
+}
+
+

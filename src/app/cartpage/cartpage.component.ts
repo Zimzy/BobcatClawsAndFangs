@@ -14,6 +14,7 @@ export class CartComponent implements OnInit{
   data: any = jsonData;
   store: any = this.data.Best_Buy.Name;
   cartProcessed: any[] = [];
+  quantities: number[] = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
   
 
   ngOnInit(){
@@ -41,6 +42,7 @@ onSelectSubCategory(subCat: string){
       image_URL: string;
       Route: string;
       Seller: string;
+      Quantity: number;
     
   }
 
@@ -52,16 +54,16 @@ onSelectSubCategory(subCat: string){
       if (this.saveProductService.cart[i].offers){
 
         let item: product = {"Name": this.saveProductService.cart[i].product.title, "Currency_symbol": "$","Price": this.saveProductService.cart[i].offers.primary.price, 
-          "image_URL": this.saveProductService.cart[i].product.main_image, "Route": "/detailedProducts", "Seller": this.saveProductService.cart[i].offers.primary.seller.name};
+          "image_URL": this.saveProductService.cart[i].product.main_image, "Route": "/detailedProducts", "Seller": this.saveProductService.cart[i].offers.primary.seller.name, "Quantity": 1};
         this.saveProductService.cart[i] = item;
         //console.log('product: ', this.cartProcessed[i].Name);
+        
 
       }
       else if (this.saveProductService.cart[i].Keywords) {
         let item: product = {"Name": this.saveProductService.cart[i].Name, "Currency_symbol": "$","Price": this.saveProductService.cart[i].Price, 
-          "image_URL": this.saveProductService.cart[i].Img_URL, "Route": "/products", "Seller": this.store};
+          "image_URL": this.saveProductService.cart[i].Img_URL, "Route": "/products", "Seller": this.store, "Quantity": 1};
           this.saveProductService.cart[i] = item;
-          
       }
 
       else{
@@ -83,8 +85,13 @@ onSelectSubCategory(subCat: string){
     
   }
 
+    onQuantityChange(product: any, newQty: string): void {
+    const qty = Number(newQty);
+    if (!isNaN(qty) && qty > 0) {
+      product.Quantity = qty;
+    }
+  }
   
-
   removeFromCart(product: any){
     
     // const index = this.cartProcessed.indexOf(product);
@@ -100,14 +107,27 @@ onSelectSubCategory(subCat: string){
   
 
 
-  priceSum():string{
-    let sum = 0;
-    for(let i = 0; i<this.cartProcessed.length; i++){
-      sum+= this.cartProcessed[i].Price;
+  // priceSum():string{
+  //   let sum = 0;
+  //   for(let i = 0; i<this.cartProcessed.length; i++){
+  //     sum+= this.cartProcessed[i].Price;
+  // }
+  // let sum2=(Math.round(sum * 100) / 100).toFixed(2);
+  // return sum2;
+  // }
+  priceSum(): string {
+  let sum = 0;
+
+  for (let i = 0; i < this.cartProcessed.length; i++) {
+    const item = this.cartProcessed[i];
+    const qty = item.Quantity && item.Quantity > 0 ? item.Quantity : 1; // default to 1
+    sum += item.Price * qty;
   }
-  let sum2=(Math.round(sum * 100) / 100).toFixed(2);
+
+  const sum2 = (Math.round(sum * 100) / 100).toFixed(2);
   return sum2;
-  }
+}
+
  printPage(): void {
     window.print();
   } 
