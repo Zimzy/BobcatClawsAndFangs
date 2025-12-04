@@ -12,6 +12,8 @@ export class ProductspageComponent implements OnInit {
     searchResults = this.saveProductService.getCat();
     similarProducts: any[] = [];
 
+    showToast: boolean = false;
+
     constructor(private saveProductService: SaveProductService){}
 
     ngOnInit() {
@@ -51,6 +53,13 @@ export class ProductspageComponent implements OnInit {
   saveToCart(){
     //console.log('saving to cart:', this.product.Name);
     this.saveProductService.saveCart();
+    
+    //Have pop up show up when adding to cart
+    this.showToast = true;
+
+  setTimeout(() => {
+    this.showToast = false;
+  }, 2000);
   }
 
    saveProduct(value: any){
