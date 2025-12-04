@@ -67,19 +67,19 @@
 
 
 
-<div class="grid-container">
+<!-- <div class="grid-container">
   <div class="cart-info">
-<h5>Product Count: {{ cartProcessed.length }}</h5>
+<h5>Product Count: {{ cartProcessed.length }}</h5> -->
 <!-- </span> -->
 
 <!-- <h5 class="bottom">Subtotal: {{priceSum()}}</h5>
 <button class="print-btn" (click)="printPage()">Print Page</button> -->
-</div>
+<!-- </div> -->
 
 
 
-
-</div>
+<!-- 
+</div> -->
 
 <ul>
   <li
@@ -87,41 +87,41 @@
     *ngFor="let product of cartProcessed; let i = index"
   >
     <div class="row">
+  <!-- Product name is the only thing that navigates -->
+  <h5 class="product-link" [routerLink]="product.Route">
+    {{ product.Name }}
+  </h5>
 
-      <!-- Clickable area that navigates to the product page -->
-      <div class="product-main" [routerLink]="product.Route">
-        <h5>{{ product.Name }}</h5>
-        <img [src]="product.image_URL">
-        <button class="cart-button" (click)="removeFromCart(product); $event.stopPropagation()">
-          <i class="bi bi-x-lg"></i>
-        </button>
-        <h5>Price: {{ product.Currency_symbol }}{{ product.Price }}</h5>
-      </div>
+  <img [src]="product.image_URL">
 
-      <!-- Non-routing area where the Qty dropdown lives -->
-      <div
-        class="cart-qty"
-        (click)="$event.stopPropagation()"
-        (mousedown)="$event.stopPropagation()"
-      >
-        <label [for]="'qty-' + i">Qty:</label>
-        <select
-  [id]="'qty-' + i"
-  [(ngModel)]="product.Quantity"
-  (ngModelChange)="onQuantityChange(product, $event)"
->
-  <option *ngFor="let q of quantities" [value]="q">
-    {{ q }}
-  </option>
-</select>
-      </div>
+  <button
+    class="cart-button"
+    (click)="removeFromCart(product); $event.stopPropagation()"
+  >
+    <i class="bi bi-x-lg"></i>
+  </button>
 
-      <h5>
-        Item total:
-        {{ product.Currency_symbol }}{{ product.Price * (product.Quantity || 1) }}
-      </h5>
+  <h5>Price: {{ product.Currency_symbol }}{{ product.Price }}</h5>
 
-    </div>
+  <!-- Qty block: completely non-routing -->
+  <div class="cart-qty">
+    <label [for]="'qty-' + i">Qty:</label>
+    <select
+      [id]="'qty-' + i"
+      [(ngModel)]="product.Quantity"
+      (ngModelChange)="onQuantityChange(product, $event)"
+    >
+      <option *ngFor="let q of quantities" [value]="q">
+        {{ q }}
+      </option>
+    </select>
+  </div>
+
+  <h5>
+    Item total:
+    {{ product.Currency_symbol }}{{ product.Price * (product.Quantity || 1) }}
+  </h5>
+</div>
   </li>
 </ul>
 
