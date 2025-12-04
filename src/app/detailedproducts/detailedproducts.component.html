@@ -12,6 +12,10 @@
 
      <div class="bottom">
   <button class="cart-button" (click)="saveToCart()">Add to cart</button>
+
+  <div *ngIf="showToast" class="toast-popup">
+        ✔ Added to cart!
+        </div>
   </div>
 
      </div>

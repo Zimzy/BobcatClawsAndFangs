@@ -16,6 +16,8 @@ export class CategoryPageComponent {
   startValue: number = 300;
   endValue: number = 400;
   typeProduct: any = this.saveProductService.getKeyword();
+
+  showToast: boolean = false;
   //seller: any = this.searchResults.offers.primary.seller.name;
   saveProduct(value: any){
     console.log("data is:", this.searchResults)
@@ -23,6 +25,20 @@ export class CategoryPageComponent {
     console.log(value);
     this.saveProductService.saveProductService(value);
   }
+
+  saveToCart(item: any) {
+    // save the selected item into the service
+    this.saveProductService.saveProductService(item);
+    // add to cart (same service method you use elsewhere)
+    this.saveProductService.saveCart();
+
+    // show toast
+    this.showToast = true;
+    setTimeout(() => {
+      this.showToast = false;
+    }, 2000);
+  }
+  
   filterProducts() {
     this.filteredProducts = this.searchResults.filter((data: { offers: { primary: { price: any; }; }; }) => {
       const price = data.offers.primary.price;

@@ -11,6 +11,8 @@ export class DetailedproductsComponent {
   searchResults = this.saveProductService.getCat();
   similarProducts: any[] = [];
 
+  showToast: boolean = false;
+
   // Price range properties
  
     constructor(private saveProductService: SaveProductService){}
@@ -48,6 +50,11 @@ export class DetailedproductsComponent {
     
     console.log("product:",this.saveProductService.productValue);
     this.saveProductService.saveCart();
+
+    this.showToast = true;
+    setTimeout(() => {
+      this.showToast = false;
+    }, 2000);
   }
 
   saveProduct(value: any){
