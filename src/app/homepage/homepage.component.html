@@ -34,6 +34,19 @@
         $ {{ item.Price }}
       </h2>
 
+          <div class="compare-wrapper">
+      <!-- prevent navigation when clicking the checkbox/label -->
+      <label class="compare-label" (click)="$event.stopPropagation()">
+        <input
+          type="checkbox"
+          [checked]="saveProductService.isInCompare(item)"
+          (change)="onCompareChange(item, $event)"
+          (click)="$event.stopPropagation()"
+        />
+        Compare
+      </label>
+    </div>
+
 </div>
  </div>
 </body>

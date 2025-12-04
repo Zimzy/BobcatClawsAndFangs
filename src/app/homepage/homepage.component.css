@@ -57,3 +57,19 @@
     margin-right: 400px;
     margin-left: 400px;
 }
+.compare-wrapper {
+  margin-top: 8px;
+  text-align: left;
+}
+
+.compare-label {
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  cursor: pointer;
+}
+
+.compare-label input {
+  cursor: pointer;
+}

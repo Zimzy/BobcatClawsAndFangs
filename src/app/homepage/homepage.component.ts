@@ -14,8 +14,7 @@ export class HomepageComponent implements OnInit {
  searchResults = this.data.Best_Buy.Product;
  store: any = this.data.Best_Buy.Name;
 
- 
- constructor(private saveProductService: SaveProductService, ){}
+ constructor(public saveProductService: SaveProductService, ){}
   ngOnInit(){
     console.log('Product Data',this.searchResults);
 
@@ -28,6 +27,27 @@ export class HomepageComponent implements OnInit {
     this.saveProductService.saveProductService(value);
   }
 
-    // Sub cat selection
+    onCompareChange(item: any, event: Event): void {
+    // 🔹 Don't let this click trigger the parent div's (click) and routerLink
+    event.stopPropagation();
+
+    const input = event.target as HTMLInputElement;
+
+    if (input.checked) {
+      const result = this.saveProductService.addToCompare(item);
+
+      // If your addToCompare() returns { success, reason }, we can handle max=5
+      if (!result.success && result.reason === 'max') {
+        // Revert checkbox state
+        input.checked = false;
+
+        // TODO: replace with your toast if you want
+        alert('You can only compare up to 5 items.');
+      }
+    } else {
+      this.saveProductService.removeFromCompare(item);
+    }
+  }
+
     
 }
