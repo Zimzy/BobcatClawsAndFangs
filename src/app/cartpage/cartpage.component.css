@@ -240,20 +240,7 @@
   display: inline-block;
   cursor: pointer;
 }
-/* 
-.cart-qty {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  position: relative;
-  z-index: 5;
-}
 
-.cart-qty select {
-  position: relative;
-  z-index: 6;
-} */
- /* --- Pretty Styling (restored) --- */
 .cart-qty {
   display: flex;
   align-items: center;
@@ -261,9 +248,8 @@
   margin-top: 8px;
   font-family: Roboto Mono;
 
-  /* ---- Functional Fixes ---- */
   position: relative;
-  z-index: 10;        /* higher than surrounding row */
+  z-index: 10;
 }
 
 .cart-qty select {
@@ -272,14 +258,13 @@
   border: 1px solid #AC9155;
   background-color: #fff8ed;
 
-  /* ---- Functional Fix ---- */
+
   position: relative;
-  z-index: 11;        /* top of everything */
+  z-index: 11;
   
-  cursor: pointer;    /* nice pointer cursor */
+  cursor: pointer;
 }
 
-/* Optional: prettier label spacing */
 .cart-qty label {
   font-weight: bold;
 }
